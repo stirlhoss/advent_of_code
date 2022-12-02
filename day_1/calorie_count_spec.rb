@@ -1,3 +1,6 @@
+#!/usr/bin/env ruby
+require 'pry'
+
 values = File.read('input.input').lines.map(&:to_i)
 
 elf_calories = Hash.new 0
@@ -11,6 +14,6 @@ values.each do |value|
   end
 end
 
-max_cal = elf_calories.max_by{| c | c}
+max_cal = elf_calories.max_by{ |elf , c | c}
 
-print max_cal, "n"
+print max_cal
